@@ -1,12 +1,14 @@
 import webbrowser
 
+
 class Movie():
-    def __init__(self, title, storyline, poster_image_url, trailer_youtube_url):
+    """Contains all information of a favourite movie"""
+    def __init__(self, title, storyline, image, trailer):
         self.title = title
         self.storyline = storyline
-        self.poster_image_url = poster_image_url
-        self.trailer_youtube_url = trailer_youtube_url
+        self.poster_image_url = image
+        self.trailer_youtube_url = trailer
 
-    # Opens the classes trailer property as a url in the users default browser
     def show_trailer(self):
+        """Opens the classes trailer property as a url in the users default browser"""
         webbrowser.open(self.trailer)
